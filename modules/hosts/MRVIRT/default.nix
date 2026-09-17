@@ -29,6 +29,7 @@
         development
       ]
       ++ [
+        inputs.disko.nixosModules.disko
         self.diskoConfigurations.mrvirtFileSystem
         ./_hardware.nix
       ];

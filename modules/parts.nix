@@ -5,7 +5,7 @@
 }: {
   imports = [
     inputs.home-manager.flakeModules.home-manager
-    inputs.disko.nixosModules.disko
+    inputs.disko.flakeModules.default
   ];
   systems = [
     "x86_64-linux"
