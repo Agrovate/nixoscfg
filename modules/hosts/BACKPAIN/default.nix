@@ -30,7 +30,6 @@
         development
       ]
       ++ [
-        inputs.disko.nixosModules.disko
         self.diskoConfigurations.backpainFileSystem
       ];
   };
