@@ -4,29 +4,34 @@
   ...
 }: {
   flake.nixosConfigurations.BACKPAIN = inputs.nixpkgs.lib.nixosSystem {
-    modules = with self.nixosModules; [
-      # main configurations for the system
-      backpain
-      backpainHardware
+    modules = with self.nixosModules;
+      [
+        # main configurations for the system
+        backpain
+        backpainHardware
 
-      # Home manager but kinda usless
-      myHomeManager
+        # Home manager but kinda usless
+        myHomeManager
 
-      # CPU and GPU drivers
-      cpuIntel
-      gpuIntel
+        # CPU and GPU drivers
+        cpuIntel
+        gpuIntel
 
-      # Contains boot,locale,users,nix-settings,network,audio,brightness
-      core
+        # Contains boot,locale,users,nix-settings,network,audio,brightness
+        core
 
-      #Environment
-      niri
+        #Environment
+        niri
 
-      # Contains quickshell, greetd, fonts, and devices
-      desktop
+        # Contains quickshell, greetd, fonts, and devices
+        desktop
 
-      # Contains tools for development
-      development
-    ];
+        # Contains tools for development
+        development
+      ]
+      ++ [
+        inputs.disko.nixosModules.disko
+        self.diskoConfigurations.backpainFileSystem
+      ];
   };
 }
