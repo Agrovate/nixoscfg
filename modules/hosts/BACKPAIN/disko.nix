@@ -36,11 +36,11 @@
                 subvolumes = {
                   "/persist" = {
                     mountpoint = "/persist";
-                    mountOptions = ["compress=zstd" "notime"];
+                    mountOptions = ["compress=zstd" "noatime"];
                   };
                   "/nix" = {
                     mountpoint = "/nix";
-                    mountOptions = ["compress=zstd" "notime"];
+                    mountOptions = ["compress=zstd" "noatime"];
                   };
                 };
               };
