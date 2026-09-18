@@ -32,6 +32,7 @@
       ++ [
         inputs.disko.nixosModules.disko
         self.diskoConfigurations.backpainFileSystem
+        #inputs.preservation.nixosModules.default
       ];
   };
 }

@@ -6,6 +6,7 @@
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
+    preservation.url = "github:nix-community/preservation";
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
