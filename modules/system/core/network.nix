@@ -59,7 +59,9 @@
     };
     services.openssh = {
       enable = true;
-      PermitRootLogin = "yes";
+      settings = {
+        PermitRootLogin = "yes";
+      };
     };
     systemd.services.NetworkManager-wait-online.enable = false;
   };
