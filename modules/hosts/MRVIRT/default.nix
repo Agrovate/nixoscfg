@@ -12,10 +12,6 @@
         # Home manager but kinda usless
         myHomeManager
 
-        # CPU and GPU drivers
-        cpuIntel
-        gpuIntel
-
         # Contains boot,locale,users,nix-settings,network,audio,brightness
         core
 
@@ -23,10 +19,7 @@
         desktop
 
         #Environment
-        niri
-
-        # Contains tools for development
-        development
+        i3
       ]
       ++ [
         inputs.disko.nixosModules.disko
