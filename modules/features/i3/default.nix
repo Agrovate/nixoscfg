@@ -19,11 +19,12 @@
           dmenu
           i3status
           xinit
+          ghostty
         ];
       };
     };
 
-    services.greetd.settings.default_session.command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd ${self.packages.${pkgs.stdenv.hostPlatform.system}.myI3}/bin/i3";
+    services.greetd.settings.default_session.command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd '${pkgs.xinit}/bin/startx ${self.packages.${pkgs.stdenv.hostPlatform.system}.myI3}/bin/i3 --'";
   };
 
   perSystem = {
@@ -41,7 +42,8 @@
           xrandr
         ]
         ++ [
-          self'.packages.myGhostty
+          #self'.packages.myGhostty
+          ghostty
         ];
 
       flags = {
