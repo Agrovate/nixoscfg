@@ -19,7 +19,6 @@
 
     home.packages = with pkgs; [
       btop
-      fastfetch
       unzip
       zip
       ripgrep
