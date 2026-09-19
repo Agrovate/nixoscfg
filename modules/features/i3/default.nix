@@ -26,8 +26,17 @@
   perSystem = {
     pkgs,
     self',
+    lib,
     ...
-  }: {
+  }: let
+    inputConfig = builtins.readFile ./config;
+    updatedConfig =
+      builtins.replaceStrings
+      ["ghostty"]
+      [(lib.getExe self'.packages.myGhostty)]
+      inputConfig;
+    finalConfig = pkgs.writeText "i3-config" updatedConfig;
+  in {
     packages.myI3 = inputs.wrapper-modules.lib.wrapPackage {
       inherit pkgs;
 
@@ -49,7 +58,7 @@
         ];
 
       flags = {
-        "-c" = ./config;
+        "-c" = finalConfig;
       };
     };
   };
