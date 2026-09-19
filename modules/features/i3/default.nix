@@ -6,15 +6,12 @@
   flake.nixosModules.i3 = {pkgs, ...}: {
     services.xserver = {
       enable = true;
-
-      desktopManager.xterm.enable = false;
-
+      libinput.enable = true;
+      displayManager.sx.enable = true;
       windowManager.i3 = {
         enable = true;
-
         package =
           self.packages.${pkgs.stdenv.hostPlatform.system}.myI3;
-
         extraPackages = with pkgs; [
           dmenu
           i3status
@@ -23,8 +20,7 @@
         ];
       };
     };
-
-    services.greetd.settings.default_session.command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd '${pkgs.xinit}/bin/startx ${self.packages.${pkgs.stdenv.hostPlatform.system}.myI3}/bin/i3 --'";
+    services.greetd.settings.default_session.command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --sessions /run/current-system/sw/share/xsessions";
   };
 
   perSystem = {
@@ -40,10 +36,16 @@
       runtimePkgs = with pkgs;
         [
           xrandr
+          xkill
+          xinit
+          xauth
+          xsetroot
+          xorgserver
+          xf86inputlibinput
+          xf86inputsynaptics
         ]
         ++ [
           #self'.packages.myGhostty
-          ghostty
         ];
 
       flags = {

@@ -23,6 +23,7 @@
 
         #Environment
         niri
+        i3
 
         # Contains quickshell, greetd, fonts, and devices
         desktop

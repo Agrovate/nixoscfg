@@ -3,7 +3,7 @@
     imports = with self.nixosModules; [
       devices
       quickshell
-      greetd
+      ly
       fonts
     ];
 
