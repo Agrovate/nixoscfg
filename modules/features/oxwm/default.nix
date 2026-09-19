@@ -14,8 +14,6 @@
       self.packages.${pkgs.stdenv.hostPlatform.system}.myOxwm
       pkgs.ghostty
     ];
-
-    services.greetd.settings.default_session.command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd startx";
   };
 
   perSystem = {

@@ -4,9 +4,9 @@
   ...
 }: {
   flake.nixosModules.i3 = {pkgs, ...}: {
+    services.libinput.enable = true;
     services.xserver = {
       enable = true;
-      libinput.enable = true;
       displayManager.sx.enable = true;
       windowManager.i3 = {
         enable = true;
@@ -20,7 +20,6 @@
         ];
       };
     };
-    services.greetd.settings.default_session.command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --sessions /run/current-system/sw/share/xsessions";
   };
 
   perSystem = {

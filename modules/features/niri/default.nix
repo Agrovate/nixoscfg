@@ -8,7 +8,6 @@
       enable = true;
       package = self.packages.${pkgs.stdenv.hostPlatform.system}.myNiri;
     };
-    services.greetd.settings.default_session.command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd niri-session";
     environment.systemPackages = with pkgs; [awww xwayland-satellite];
   };
   perSystem = {
