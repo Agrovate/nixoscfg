@@ -5,7 +5,6 @@ set $term ghostty
 set $menu dmenu_run -fn 'MesloLGS Nerd Font Mono-10' -nb '#2e3440' -nf '#d8dee9' -sb '#4c566a' -sf '#eceff4'
 
 exec --no-startup-id xrandr --auto
-exec --no-startup-id ghostty
 
 # Window functions
 bindsym $mod+q kill

@@ -22,8 +22,17 @@
           dynamic_padding = true;
           decorations = "None";
         };
+
         cursor.style.shape = "Block";
         general.live_config_reload = true;
+
+        font = {
+          size = 12;
+          normal = {
+            family = "Iosevka Nerd Font Mono";
+            style = "Regular";
+          };
+        };
         colors = {
           primary = {
             background = "#232831";
