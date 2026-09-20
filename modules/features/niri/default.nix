@@ -35,7 +35,7 @@
           "Mod+F".maximize-column = _: {};
           "Mod+Shift+F".fullscreen-window = _: {};
 
-          "Mod+Return".spawn-sh = lib.getExe self'.packages.myGhostty;
+          "Mod+Return".spawn-sh = lib.getExe self'.packages.myAlacritty;
 
           "Mod+Q".close-window = _: {};
           "Mod+E".quit = _: {};
@@ -54,6 +54,12 @@
           "Mod+L".focus-column-right = _: {};
           "Mod+K".focus-window-or-workspace-up = _: {};
           "Mod+J".focus-window-or-workspace-down = _: {};
+
+          "Mod+Alt+H".focus-monitor-left = _: {};
+          "Mod+Alt+L".focus-monitor-right = _: {};
+
+          "Mod+Shift+Alt+H".move-column-to-monitor-left = _: {};
+          "Mod+Shift+Alt+L".move-column-to-monitor-right = _: {};
 
           "Mod+Shift+H".move-column-left = _: {};
           "Mod+Shift+L".move-column-right = _: {};
