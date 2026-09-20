@@ -1,9 +1,7 @@
 {inputs, ...}: {
-  flake.nixosModules.backpain = {pkgs, ...}: {
-    networking.hostName = "BACKPAIN";
+  flake.nixosModules.mrvirt = {pkgs, ...}: {
+    networking.hostName = "MRVIRT";
 
-    xdg.portal.enable = true;
-    xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
     programs.nix-ld.enable = true;
 
     environment.systemPackages = with pkgs; [

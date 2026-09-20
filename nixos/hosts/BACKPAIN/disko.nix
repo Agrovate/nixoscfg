@@ -1,5 +1,5 @@
 {
-  flake.diskoConfigurations.backpainFileSystem = {
+  flake.diskoConfigurations.backpain = {
     disko.devices = {
       disk.main = {
         device = "/dev/disk/by-id/nvme-PC_SN530_NVMe_WDC_256GB_22074K801654";

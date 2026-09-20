@@ -3,28 +3,38 @@
   inputs,
   ...
 }: {
-  flake.nixosConfigurations.MRVIRT = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.BACKPAIN = inputs.nixpkgs.lib.nixosSystem {
     modules = with self.nixosModules;
       [
         # main configurations for the system
-        mrvirt
+        backpain
+        backpainHardware
+        #preservation
 
         # Home manager but kinda usless
         myHomeManager
 
+        # CPU and GPU drivers
+        cpuIntel
+        gpuIntel
+
         # Contains boot,locale,users,nix-settings,network,audio,brightness
         core
+
+        #Environment
+        niri
+        i3
 
         # Contains quickshell, greetd, fonts, and devices
         desktop
 
-        #Environment
-        i3
+        # Contains tools for development
+        development
       ]
       ++ [
         inputs.disko.nixosModules.disko
-        self.diskoConfigurations.mrvirtFileSystem
-        ./_hardware.nix
+        self.diskoConfigurations.backpain
+        #inputs.preservation.nixosModules.default
       ];
   };
 }

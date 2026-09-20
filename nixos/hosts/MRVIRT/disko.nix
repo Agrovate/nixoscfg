@@ -1,5 +1,5 @@
 {lib, ...}: {
-  flake.diskoConfigurations.mrvirtFileSystem = {pkgs, ...}: {
+  flake.diskoConfigurations.mrvirt = {pkgs, ...}: {
     disko.devices = {
       disk.main = {
         device = lib.mkDefault "/dev/vda";
