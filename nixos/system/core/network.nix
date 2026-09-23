@@ -12,11 +12,6 @@
         enable = false;
       };
     };
-    services.openssh = {
-            enable= true;
-    };
-    systemd.services.NetworkManager-wait-online.enable = false;
-  };
 }
 */
 {...}: {
@@ -62,6 +57,13 @@
       settings = {
         PermitRootLogin = "yes";
       };
+    };
+    services.syncthing = {
+      enable = true;
+      openDefaultPorts = true;
+      user = "snow";
+      dataDir = "/home/snow/Sync";
+      configDir = "/home/snow/.config/syncthing";
     };
     systemd.services.NetworkManager-wait-online.enable = false;
   };

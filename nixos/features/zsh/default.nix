@@ -41,7 +41,7 @@
       zshrc.content = ''
         HISTFILE="$HOME/.zsh_history"
         setopt HIST_IGNORE_ALL_DUPS
-        eval "$(devenv hook zsh)"
+        eval "$(devenv hook zsh -- -q)"
       '';
     };
   };
