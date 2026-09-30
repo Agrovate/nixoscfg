@@ -28,15 +28,12 @@
     swiss.url = "github:Agrovate/swiss";
     project-maxxer.url = "github:Agrovate/project-maxxer";
     nvim.url = "github:Agrovate/nvim";
+    dotfiles.url = "path:/home/snow/dotfiles";
 
     quickshell = {
       url = "github:Agrovate/quickshell";
       flake = false;
     };
   };
-
-  outputs = inputs:
-    inputs.flake-parts.lib.mkFlake
-    {inherit inputs;}
-    (inputs.import-tree ./nixos);
+  outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./nixos);
 }

@@ -6,7 +6,6 @@
   flake.nixosModules.oxwm = {pkgs, ...}: {
     services.xserver = {
       enable = true;
-      desktopManager.xterm.enable = false;
       windowManager.oxwm.enable = true;
     };
 

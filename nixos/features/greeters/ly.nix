@@ -8,6 +8,7 @@
         bigclock = true; # Enlarged text clock
         clear_password = true; # Clear input buffer on password failure
         hide_borders = false;
+        session_log = "null";
       };
     };
   };

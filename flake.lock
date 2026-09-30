@@ -20,6 +20,21 @@
         "type": "github"
       }
     },
+    "dotfiles": {
+      "inputs": {
+        "i3": "i3"
+      },
+      "locked": {
+        "lastModified": 1790743475,
+        "narHash": "sha256-d0YvTgFpycTKEys3x+gUldaPWeJ+1RDQlWFiHAvd+tM=",
+        "path": "/home/snow/dotfiles",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/snow/dotfiles",
+        "type": "path"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -57,6 +72,19 @@
         "repo": "home-manager",
         "type": "github"
       }
+    },
+    "i3": {
+      "locked": {
+        "path": "./i3",
+        "type": "path"
+      },
+      "original": {
+        "path": "./i3",
+        "type": "path"
+      },
+      "parent": [
+        "dotfiles"
+      ]
     },
     "import-tree": {
       "locked": {
@@ -255,6 +283,7 @@
     "root": {
       "inputs": {
         "disko": "disko",
+        "dotfiles": "dotfiles",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
