@@ -293,8 +293,7 @@
         "project-maxxer": "project-maxxer",
         "quickshell": "quickshell",
         "swiss": "swiss",
-        "wrapper-modules": "wrapper-modules",
-        "zen-browser": "zen-browser"
+        "wrapper-modules": "wrapper-modules"
       }
     },
     "swiss": {
@@ -348,26 +347,6 @@
       "original": {
         "owner": "BirdeeHub",
         "repo": "nix-wrapper-modules",
-        "type": "github"
-      }
-    },
-    "zen-browser": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1789636270,
-        "narHash": "sha256-sexm8hHHB2jOB/G70czjQxdxeX68zID6G1BomFIGI+w=",
-        "owner": "youwen5",
-        "repo": "zen-browser-flake",
-        "rev": "9c1767f705262bf08498877fd1053b6a6db12a9f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "youwen5",
-        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

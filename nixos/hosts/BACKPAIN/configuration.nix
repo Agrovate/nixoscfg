@@ -5,13 +5,15 @@
     programs.nix-ld.enable = true;
 
     environment.systemPackages = with pkgs; [
-      inputs.zen-browser.packages.x86_64-linux.default
       inputs.swiss.packages.x86_64-linux.default
       inputs.project-maxxer.packages.x86_64-linux.default
 
       nautilus
       keepassxc
       docker-compose
+      aria2
+      localsend
+      firefox
     ];
     boot.loader.grub.extraEntries = ''
       menuentry 'Gentoo Linux (on /dev/nvme0n1p4)' --class gentoo --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-simple-00c79a4d-c0f5-4d02-b9e5-08117d3a41cb' {
