@@ -25,8 +25,8 @@
         "i3": "i3"
       },
       "locked": {
-        "lastModified": 1790743475,
-        "narHash": "sha256-d0YvTgFpycTKEys3x+gUldaPWeJ+1RDQlWFiHAvd+tM=",
+        "lastModified": 1790915009,
+        "narHash": "sha256-TGDO/cK8XzgXOVzk+jxi2g66gpvTpdEjCNbwKdrfjm8=",
         "path": "/home/snow/dotfiles",
         "type": "path"
       },
@@ -218,11 +218,11 @@
         "wrappers": "wrappers"
       },
       "locked": {
-        "lastModified": 1790024902,
-        "narHash": "sha256-0kcqfUjX+jH9I61/Ppi6CuBrHWaylfdH3M1lt6Ez1hE=",
+        "lastModified": 1790918339,
+        "narHash": "sha256-47mr0XaeYqSvcAfdve/8Wlz5NQmvXo3w25iNs2o7hU0=",
         "owner": "Agrovate",
         "repo": "nvim",
-        "rev": "2de009bcfecf8c6f24e48c192f2db9b45f79bd47",
+        "rev": "7e5ea479aca576780aa2ed589bb9be67ebf7252d",
         "type": "github"
       },
       "original": {

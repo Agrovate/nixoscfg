@@ -32,7 +32,7 @@
       ];
       firewall = {
         enable = true;
-        allowedTCPPorts = [8384 8080 8000 80 22];
+        allowedTCPPorts = [8384 8080 8000 80 22 53317];
       };
     };
     services.unbound = {
