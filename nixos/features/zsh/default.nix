@@ -1,12 +1,16 @@
 {
-  self,
   inputs,
+  moduleWithSystem,
   ...
 }: {
-  flake.nixosModules.zsh = {pkgs, ...}: {
+  flake.nixosModules.zsh = moduleWithSystem ({
+    pkgs,
+    self',
+    ...
+  }: {
     nixpkgs.overlays = [
       (final: prev: {
-        zsh = self.packages.${pkgs.stdenv.hostPlatform.system}.myZsh;
+        zsh = self'.packages.myZsh;
       })
     ];
     programs.zsh = {
@@ -21,7 +25,7 @@
     programs.starship.enable = true;
     programs.zoxide.enable = true;
     programs.zoxide.enableZshIntegration = true;
-  };
+  });
 
   perSystem = {
     pkgs,

@@ -40,7 +40,8 @@
           "Mod+Q".close-window = _: {};
           "Mod+E".quit = _: {};
 
-          "Mod+Space".spawn-sh = "${lib.getExe self'.packages.myBar} ipc call launcher toggle";
+          #"Mod+Space".spawn-sh = "${lib.getExe self'.packages.myBar} ipc call launcher toggle";
+          "Mod+Space".spawn-sh = "${lib.getExe pkgs.rofi} -show drun";
 
           "Mod+Shift+V".toggle-window-floating = _: {};
           "Mod+V".switch-focus-between-floating-and-tiling = _: {};

@@ -14,6 +14,9 @@
       aria2
       localsend
       firefox
+      mgba
+      qbittorrent
+      mpv
     ];
     boot.loader.grub.extraEntries = ''
       menuentry 'Gentoo Linux (on /dev/nvme0n1p4)' --class gentoo --class gnu-linux --class gnu --class os $menuentry_id_option 'osprober-gnulinux-simple-00c79a4d-c0f5-4d02-b9e5-08117d3a41cb' {
@@ -89,6 +92,6 @@
         ];
       };
     };
-    users.users.snow.extraGroups = ["docker"];
+    users.users.snow.extraGroups = ["docker" "dialout"];
   };
 }

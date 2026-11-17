@@ -12,7 +12,7 @@
   in {
     imports =
       [
-        # /etc/nixos/hardware-configuration.nix | using --impure
+        # /etc/nixos/hardware-configuration.nix # | using --impure
       ]
       ++ modules;
   };

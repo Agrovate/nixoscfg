@@ -14,6 +14,7 @@
     environment.systemPackages = with pkgs; [
       devenv
       claude-code
+      opencode
       direnv
       wget
       wl-clipboard

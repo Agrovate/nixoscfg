@@ -1,6 +1,7 @@
 {
   self,
   inputs,
+  pkgs,
   ...
 }: {
   flake.nixosConfigurations.BACKPAIN = inputs.nixpkgs.lib.nixosSystem {
